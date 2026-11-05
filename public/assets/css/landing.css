@@ -1,0 +1,537 @@
+/*
+========================================================================
+   LANDING PAGE STYLESHEET
+   Memakai design tokens (CSS variables) dari main.css (Spark Admin).
+   Pastikan main.css dimuat SEBELUM file ini.
+========================================================================
+*/
+
+/* ---------------------------------------------------------------------
+   1. Base
+--------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+.landing-body {
+    background-color: var(--bs-body-bg);
+}
+
+.landing-section {
+    padding: 6rem 0;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--brand-forest-medium);
+    background-color: var(--brand-lime-translucent);
+    padding: 0.4rem 0.9rem;
+    border-radius: 50rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+}
+
+.section-desc {
+    font-size: 1rem;
+    color: var(--text-muted-green);
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+/* ---------------------------------------------------------------------
+   2. Navbar
+--------------------------------------------------------------------- */
+.landing-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    padding: 1.15rem 0;
+    transition: all 0.3s ease;
+}
+
+.landing-navbar.scrolled {
+    background-color: rgba(5, 28, 18, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.75rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.landing-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.landing-brand:hover {
+    color: #FFFFFF;
+}
+
+.landing-brand .brand-logo {
+    height: 40px;
+    transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.landing-brand:hover .brand-logo {
+    transform: scale(1.06);
+}
+
+.landing-navbar.scrolled .landing-brand .brand-logo {
+    height: 34px;
+}
+
+.landing-footer .footer-logo .brand-logo {
+    height: 24px;
+}
+
+.landing-nav-link {
+    color: var(--text-sidebar-muted) !important;
+    font-weight: 600;
+    font-size: 0.925rem;
+    padding: 0.5rem 1rem !important;
+}
+
+.landing-nav-link:hover,
+.landing-nav-link.active {
+    color: #FFFFFF !important;
+}
+
+.landing-navbar .navbar-toggler {
+    border: 1px solid var(--border-dark-green);
+    color: #FFFFFF;
+    padding: 0.4rem 0.65rem;
+    font-size: 1.35rem;
+}
+
+.landing-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px var(--brand-lime-translucent);
+}
+
+.btn-lime {
+    background-color: var(--brand-lime);
+    color: var(--brand-forest-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 50rem;
+    padding: 0.7rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+.btn-lime:hover {
+    background-color: var(--brand-lime-hover);
+    color: var(--brand-forest-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(180, 241, 5, 0.3);
+}
+
+.btn-lime i {
+    transition: transform 0.25s ease;
+}
+
+.btn-lime:hover i {
+    transform: translateX(3px);
+}
+
+.btn-ghost-light {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50rem;
+    padding: 0.7rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+.btn-ghost-light:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #FFFFFF;
+}
+
+/* ---------------------------------------------------------------------
+   3. Hero
+--------------------------------------------------------------------- */
+.landing-hero {
+    position: relative;
+    background-color: var(--brand-forest-dark);
+    color: #FFFFFF;
+    padding: 10rem 0 7rem;
+    overflow: hidden;
+}
+
+.landing-hero::before,
+.landing-hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.landing-hero::before {
+    width: 520px;
+    height: 520px;
+    top: -180px;
+    right: -120px;
+    background: radial-gradient(circle, rgba(180, 241, 5, 0.18) 0%, rgba(180, 241, 5, 0) 70%);
+}
+
+.landing-hero::after {
+    width: 420px;
+    height: 420px;
+    bottom: -200px;
+    left: -120px;
+    background: radial-gradient(circle, rgba(180, 241, 5, 0.1) 0%, rgba(180, 241, 5, 0) 70%);
+}
+
+.landing-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-dark-green);
+    color: var(--text-sidebar-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 50rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-badge span {
+    background-color: var(--brand-lime);
+    color: var(--brand-forest-dark);
+    font-weight: 800;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50rem;
+}
+
+.hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title .highlight {
+    color: var(--brand-lime);
+}
+
+.hero-title-sub {
+    font-size: 0.65em;
+    font-weight: 700;
+    margin-top: 0.35rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-desc {
+    font-size: 1.075rem;
+    color: var(--text-sidebar-muted);
+    line-height: 1.75;
+    max-width: 540px;
+    margin-bottom: 2.25rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.hero-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-sidebar-muted);
+    margin-top: 0.35rem;
+}
+
+/* Hero visual (mock dashboard card) */
+.hero-visual {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-dark-green);
+    border-radius: var(--radius-xxl);
+    padding: 1.5rem;
+    backdrop-filter: blur(6px);
+}
+
+.hero-visual-card {
+    background-color: #FFFFFF;
+    border-radius: var(--radius-xl);
+    padding: 1.25rem;
+    color: var(--text-main);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-visual-card + .hero-visual-card {
+    margin-top: 1rem;
+}
+
+.hero-bar-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    height: 110px;
+    margin-top: 1rem;
+}
+
+.hero-bar {
+    flex: 1;
+    border-radius: 6px 6px 0 0;
+    background-color: var(--brand-forest-medium);
+}
+
+.hero-bar.lime {
+    background-color: var(--brand-lime);
+}
+
+.hero-floating-chip {
+    position: absolute;
+    top: -18px;
+    right: 24px;
+    background-color: var(--brand-lime);
+    color: var(--brand-forest-dark);
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+    box-shadow: 0 10px 25px rgba(180, 241, 5, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* ---------------------------------------------------------------------
+   4. Feature Cards
+--------------------------------------------------------------------- */
+.feature-card {
+    background-color: #FFFFFF;
+    border-radius: var(--radius-xxl);
+    padding: 2rem;
+    height: 100%;
+    box-shadow: var(--shadow-md);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--brand-lime);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background-color: var(--brand-forest-medium);
+    color: var(--brand-lime);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotate(-8deg) scale(1.05);
+}
+
+.feature-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.feature-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted-green);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------
+   5. About / Content Section
+--------------------------------------------------------------------- */
+.about-visual {
+    background-color: #E2E8DF;
+    border-radius: var(--radius-xxl);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about-visual .about-watermark {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    height: 260px;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.about-quote {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--brand-forest-dark);
+    position: relative;
+    z-index: 2;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.75rem 0 2rem;
+}
+
+.about-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.about-list li i {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--brand-lime);
+    color: var(--brand-forest-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* ---------------------------------------------------------------------
+   6. CTA
+--------------------------------------------------------------------- */
+.landing-cta {
+    background-color: var(--brand-forest-medium);
+    border-radius: var(--radius-xxl);
+    padding: 4rem 3rem;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.landing-cta::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(180, 241, 5, 0.2) 0%, rgba(180, 241, 5, 0) 70%);
+    pointer-events: none;
+}
+
+.landing-cta h2 {
+    color: #FFFFFF;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 800;
+    position: relative;
+}
+
+.landing-cta p {
+    color: var(--text-sidebar-muted);
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+/* ---------------------------------------------------------------------
+   7. Footer
+--------------------------------------------------------------------- */
+.landing-footer {
+    padding: 2rem 0;
+    border-top: 1px solid rgba(11, 19, 15, 0.06);
+    font-size: 0.85rem;
+    color: var(--text-muted-green);
+}
+
+/* ---------------------------------------------------------------------
+   8. Responsive
+--------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+    .landing-navbar .navbar-collapse {
+        background-color: var(--brand-forest-dark);
+        border: 1px solid var(--border-dark-green);
+        border-radius: var(--radius-xl);
+        padding: 1rem;
+        margin-top: 0.75rem;
+    }
+
+    .landing-hero {
+        padding: 8rem 0 5rem;
+    }
+
+    .hero-visual {
+        margin-top: 3.5rem;
+    }
+
+    .landing-section {
+        padding: 4.5rem 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .landing-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+}
+
