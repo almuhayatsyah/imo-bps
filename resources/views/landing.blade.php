@@ -33,10 +33,10 @@
 
             <div class="collapse navbar-collapse" id="landingNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#beranda">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#fitur">Fitur</a></li>
-                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#tentang">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#beranda"></a></li>
+                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#fitur"></a></li>
+                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#tentang"></a></li>
+                    <li class="nav-item"><a class="nav-link landing-nav-link" href="#kontak"></a></li>
                 </ul>
                 <div class="d-flex gap-2 mt-3 mt-lg-0">
                     <a href="{{ route('login') }}" class="btn-ghost-light">Masuk</a>
@@ -138,6 +138,95 @@
         </div>
     </section>
 
+   <!-- Reusable Premium Table Component -->
+    <div class="table-card-custom">
+        <div class="table-header-control">
+            <h5 class="card-title mb-0">Daftar Kegiatan Terbaru</h5>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                <div class="table-search-box">
+                    <i class="bi bi-search table-search-icon"></i>
+                    <input type="text" class="table-search-input" placeholder="Cari kegiatan...">
+                </div>
+                <div class="table-filter-group">
+                    <button type="button" class="btn-table-action">
+                        <i class="bi bi-funnel"></i> Filter
+                    </button>
+                    <button type="button" class="btn-custom btn-custom-primary btn-custom-sm">
+                        <i class="bi bi-plus-lg"></i> Tambah Data
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th>Nomor Antrian</th>
+                        <th>Penanggung Jawab</th>
+                        <th>Nama Kegiatan</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th class="text-end">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-order-id">#BPS-001</td>
+                        <td>
+                            <div class="table-user-cell">
+                                <img src="{{ asset('assets/images/user_1.jpg') }}" alt="User" class="table-user-avatar">
+                                <div>
+                                    <div class="table-user-name">Budi Santoso</div>
+                                    <div class="table-user-sub">Statistisi Ahli Muda</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="table-product-name">Survei Sosial Ekonomi Nasional</td>
+                        <td>{{ date('d M Y') }}</td>
+                        <td><span class="badge-table success">Selesai</span></td>
+                        <td class="text-end">
+                            <a href="#" class="table-btn-action" title="Detail"><i class="bi bi-eye"></i></a>
+                            <a href="#" class="table-btn-action" title="Edit"><i class="bi bi-pencil"></i></a>
+                            <a href="#" class="table-btn-action delete" title="Hapus"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-order-id">#BPS-002</td>
+                        <td>
+                            <div class="table-user-cell">
+                                <img src="{{ asset('assets/images/user_2.jpg') }}" alt="User" class="table-user-avatar">
+                                <div>
+                                    <div class="table-user-name">Siti Aminah</div>
+                                    <div class="table-user-sub">Koordinator Fungsi</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="table-product-name">Pendataan Potensi Desa (Podes)</td>
+                        <td>{{ date('d M Y') }}</td>
+                        <td><span class="badge-table pending">Proses</span></td>
+                        <td class="text-end">
+                            <a href="#" class="table-btn-action" title="Detail"><i class="bi bi-eye"></i></a>
+                            <a href="#" class="table-btn-action" title="Edit"><i class="bi bi-pencil"></i></a>
+                            <a href="#" class="table-btn-action delete" title="Hapus"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-footer-control">
+            <span class="table-pagination-info">Menampilkan 1 sampai 2 dari 2 entri</span>
+            <nav aria-label="Table pagination">
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#">Sebelumnya</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <!-- =========================================================
          FITUR
     ========================================================== -->
@@ -184,48 +273,7 @@
             </div>
         </div>
     </section>
-
-    <!-- =========================================================
-         TENTANG
-    ========================================================== -->
-    <section class="landing-section pt-0" id="tentang">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="about-visual">
-                        <x-app-logo class="about-watermark" alt="" aria-hidden="true" />
-                        <p class="about-quote mb-3">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-                        </p>
-                        <div class="d-flex align-items-center gap-3 position-relative">
-                            <img src="{{ asset('assets/images/user_2.jpg') }}" alt="User" class="table-user-avatar">
-                            <div>
-                                <div class="table-user-name">Lorem Ipsum</div>
-                                <div class="table-user-sub">Dolor Sit Amet</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <span class="section-eyebrow"><i class="bi bi-info-circle"></i> Tentang Kami</span>
-                    <h2 class="section-title">Sed ut perspiciatis unde omnis iste natus</h2>
-                    <p class="section-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                        venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                    </p>
-                    <ul class="about-list">
-                        <li><i class="bi bi-check-lg"></i> Nullam quis risus eget urna mollis ornare vel eu leo.</li>
-                        <li><i class="bi bi-check-lg"></i> Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</li>
-                        <li><i class="bi bi-check-lg"></i> Donec ullamcorper nulla non metus auctor fringilla.</li>
-                    </ul>
-                    <a href="{{ route('login') }}" class="btn-custom btn-custom-primary">
-                        Lorem Ipsum <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- =========================================================
          CTA
@@ -249,12 +297,60 @@
             </div>
         </div>
     </section>
+     <!-- =========================================================
+         TENTANG
+    ========================================================== -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <!-- KOLOM KIRI: LABEL DAN MAPS -->
+        <div class="about-map-column">
+
+            <div class="about-label">
+                <i class="bi bi-info-circle"></i>
+                TENTANG KAMI
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.441501442072!2d96.3198743739639!3d4.1332089463178745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303ecf003d3d4bb5%3A0xa2bcc4046d75f29a!2sBPS%20Nagan%20Raya!5e0!3m2!1sid!2sid!4v1794296062472!5m2!1sid!2sid"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- KOLOM KANAN: TULISAN -->
+        <div class="about-text-column">
+
+            <h2>
+                BADAN PUSAT STATISTIK KABUPATEN NAGAN RAYA
+            </h2>
+
+            <p>
+                Jl. Paduka yang Mulia Presiden Soekarno - Suka Makmue, Gampong Alue Ie Mameh, Kecamatan Kuala, Kabupaten Nagan Raya. Kode Pos 23661
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
     <!-- =========================================================
          FOOTER
     ========================================================== -->
     <footer class="landing-footer">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-10">
             <span class="footer-logo">
                 <x-app-logo /> {{ config('app.name', 'IMO BPS') }}
             </span>
