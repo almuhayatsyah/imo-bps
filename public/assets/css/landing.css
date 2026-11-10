@@ -77,16 +77,18 @@ html {
     gap: 0.6rem;
     font-size: 1.3rem;
     font-weight: 800;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .landing-brand:hover {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .landing-brand .brand-logo {
     height: 40px;
-    transition: height 0.3s ease, transform 0.3s ease;
+    transition:
+        height 0.3s ease,
+        transform 0.3s ease;
 }
 
 .landing-brand:hover .brand-logo {
@@ -110,12 +112,12 @@ html {
 
 .landing-nav-link:hover,
 .landing-nav-link.active {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 
 .landing-navbar .navbar-toggler {
     border: 1px solid var(--border-dark-green);
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 0.4rem 0.65rem;
     font-size: 1.35rem;
 }
@@ -155,7 +157,7 @@ html {
 
 .btn-ghost-light {
     background-color: transparent;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 700;
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -170,7 +172,7 @@ html {
 .btn-ghost-light:hover {
     background-color: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.4);
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 /* ---------------------------------------------------------------------
@@ -179,14 +181,14 @@ html {
 .landing-hero {
     position: relative;
     background-color: var(--brand-forest-dark);
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 10rem 0 7rem;
     overflow: hidden;
 }
 
 .landing-hero::before,
 .landing-hero::after {
-    content: '';
+    content: "";
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
@@ -197,7 +199,11 @@ html {
     height: 520px;
     top: -180px;
     right: -120px;
-    background: radial-gradient(circle, rgba(180, 241, 5, 0.18) 0%, rgba(180, 241, 5, 0) 70%);
+    background: radial-gradient(
+        circle,
+        rgba(180, 241, 5, 0.18) 0%,
+        rgba(180, 241, 5, 0) 70%
+    );
 }
 
 .landing-hero::after {
@@ -205,7 +211,11 @@ html {
     height: 420px;
     bottom: -200px;
     left: -120px;
-    background: radial-gradient(circle, rgba(180, 241, 5, 0.1) 0%, rgba(180, 241, 5, 0) 70%);
+    background: radial-gradient(
+        circle,
+        rgba(180, 241, 5, 0.1) 0%,
+        rgba(180, 241, 5, 0) 70%
+    );
 }
 
 .landing-hero .container {
@@ -241,7 +251,7 @@ html {
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
@@ -274,7 +284,7 @@ html {
 .hero-stat-value {
     font-size: 1.75rem;
     font-weight: 800;
-    color: #FFFFFF;
+    color: #ffffff;
     line-height: 1;
 }
 
@@ -295,7 +305,7 @@ html {
 }
 
 .hero-visual-card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: var(--radius-xl);
     padding: 1.25rem;
     color: var(--text-main);
@@ -334,7 +344,7 @@ html {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
     border-radius: 50rem;
-    box-shadow: 0 10px 25px rgba(180, 241, 5, 0.35);
+    box-shadow: 0 10px 25px rgba(5, 154, 241, 0.35);
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -344,7 +354,7 @@ html {
    4. Feature Cards
 --------------------------------------------------------------------- */
 .feature-card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: var(--radius-xxl);
     padding: 2rem;
     height: 100%;
@@ -394,7 +404,7 @@ html {
    5. About / Content Section
 --------------------------------------------------------------------- */
 .about-visual {
-    background-color: #E2E8DF;
+    background-color: #e2e8df;
     border-radius: var(--radius-xxl);
     padding: 2.5rem;
     position: relative;
@@ -458,26 +468,30 @@ html {
     background-color: var(--brand-forest-medium);
     border-radius: var(--radius-xxl);
     padding: 4rem 3rem;
-    color: #FFFFFF;
+    color: #ffffff;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
 .landing-cta::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 400px;
     height: 400px;
     top: -200px;
     left: 50%;
     transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(180, 241, 5, 0.2) 0%, rgba(180, 241, 5, 0) 70%);
+    background: radial-gradient(
+        circle,
+        rgba(180, 241, 5, 0.2) 0%,
+        rgba(180, 241, 5, 0) 70%
+    );
     pointer-events: none;
 }
 
 .landing-cta h2 {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     font-weight: 800;
     position: relative;
@@ -534,4 +548,3 @@ html {
         gap: 1.5rem;
     }
 }
-
