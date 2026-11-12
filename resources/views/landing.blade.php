@@ -305,7 +305,7 @@
 
     <div class="about-container">
 
-        <!-- KOLOM KIRI: LABEL DAN MAPS -->
+        <!-- KOLOM KIRI: GOOGLE MAPS -->
         <div class="about-map-column">
 
             <div class="about-label">
@@ -316,18 +316,15 @@
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.441501442072!2d96.3198743739639!3d4.1332089463178745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303ecf003d3d4bb5%3A0xa2bcc4046d75f29a!2sBPS%20Nagan%20Raya!5e0!3m2!1sid!2sid!4v1794296062472!5m2!1sid!2sid"
-                    width="100%"
-                    height="350"
-                    style="border:0;"
-                    allowfullscreen=""
                     loading="lazy"
+                    allowfullscreen=""
                     referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
             </div>
 
         </div>
 
-        <!-- KOLOM KANAN: TULISAN -->
+        <!-- KOLOM KANAN: INFORMASI BPS -->
         <div class="about-text-column">
 
             <h2>
@@ -335,7 +332,9 @@
             </h2>
 
             <p>
-                Jl. Paduka yang Mulia Presiden Soekarno - Suka Makmue, Gampong Alue Ie Mameh, Kecamatan Kuala, Kabupaten Nagan Raya. Kode Pos 23661
+                Jl. Paduka yang Mulia Presiden Soekarno - Suka Makmue,
+                Gampong Alue Ie Mameh, Kecamatan Kuala,
+                Kabupaten Nagan Raya. Kode Pos 23661
             </p>
 
         </div>
@@ -344,24 +343,109 @@
 
 </section>
 
-
-
     <!-- =========================================================
          FOOTER
     ========================================================== -->
-    <footer class="landing-footer">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-10">
-            <span class="footer-logo">
-                <x-app-logo /> {{ config('app.name', 'IMO BPS') }}
-            </span>
-            <span>&copy; {{ date('Y') }} Lorem ipsum dolor sit amet. All rights reserved.</span>
-            <ul class="footer-links">
-                <li><a href="#" class="footer-link">Privasi</a></li>
-                <li><a href="#" class="footer-link">Ketentuan</a></li>
-                <li><a href="#" class="footer-link">Bantuan</a></li>
-            </ul>
+
+
+<footer class="landing-footer">
+
+    <!-- BAGIAN ATAS -->
+    <div class="footer-top">
+
+        <!-- KIRI: TENTANG SISTEM -->
+        <div class="footer-about">
+            <h3>INTEGRATED MONEY ORGANIZATION</h3>
+            <p>
+                IMO BPS merupakan sistem informasi pengelolaan
+                keuangan yang dirancang untuk membantu proses
+                pemantauan, pengelolaan, dan transparansi anggaran
+                di lingkungan Badan Pusat Statistik.
+            </p>
         </div>
-    </footer>
+
+        <!-- KANAN: MEDIA SOSIAL -->
+        <div class="footer-social">
+            <h4>Ikuti Kami</h4>
+
+            <div class="social-list">
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/bpskabnaganraya?xtok=N2JibzA4M3psbjFw"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sosial-icon instagram"
+                   aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <!-- FACEBOOK -->
+                <a href="https://www.facebook.com/USERNAME_FB/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sosial-icon facebook"
+                   aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <!-- TWITTER / X -->
+                <a href="https://x.com/USERNAME_X"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sosial-icon twitter"
+                   aria-label="Twitter">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+                <!-- TIKTOK -->
+                <a href="https://www.tiktok.com/@USERNAME_TIKTOK"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sosial-icon tiktok"
+                   aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <!-- WEBSITE BPS -->
+                <a href="https://naganrayakab.bps.go.id/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="sosial-icon website"
+                   aria-label="Website BPS Nagan Raya">
+                    <i class="bi bi-globe"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BAGIAN BAWAH -->
+    <div class="footer-bottom">
+
+        <!-- LOGO IMO DAN NAMA -->
+        <div class="footer-logo">
+            <img src="{{ asset('images/logo-imo.png') }}"
+                 alt="Logo IMO">
+            <span>IMO BPS</span>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <span class="footer-copyright">
+            &copy; {{ date('Y') }} IMO BPS. All rights reserved.
+        </span>
+
+        <!-- MENU FOOTER -->
+        <div class="footer-links">
+            <a href="#">Privasi</a>
+            <a href="#">Ketentuan</a>
+            <a href="#">Bantuan</a>
+        </div>
+
+    </div>
+
+</footer>
+
 
     <!-- Core Scripts -->
     <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
