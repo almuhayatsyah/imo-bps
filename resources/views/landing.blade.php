@@ -65,9 +65,7 @@
                         <span class="d-block text-white hero-title-sub">BPS Kabupaten Nagan raya</span>
                     </h1>
                     <p class="hero-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris.
+                        Keuangan negara yang baik adalah pengelolaan hak dan kewajiban negara yang dilakukan secara sehat, transparan, dan akuntabel untuk mendorong pertumbuhan ekonomi serta kesejahteraan rakyat. Pengelolaan ini berjalan optimal apabila pemerintah mampu menghimpun pendapatan secara mandiri dan adil, mengalokasikan belanja secara efektif untuk sektor produktif seperti pendidikan, kesehatan, dan infrastruktur, serta menjaga rasio defisit dan utang tetap terkendali dalam batas aman. Di samping itu, seluruh proses perencanaan hingga pelaporan harus diawasi secara ketat dan bebas dari korupsi agar anggaran negara benar-benar berfungsi menjaga stabilitas ekonomi sekaligus mengurangi kemiskinan dan ketimpangan sosial secara berkelanjutan.
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="{{ route('login') }}" class="btn-lime">
@@ -79,18 +77,7 @@
                     </div>
 
                     <div class="hero-stats">
-                        <div>
-                            <div class="hero-stat-value">12K+</div>
-                            <div class="hero-stat-label">Lorem Ipsum</div>
-                        </div>
-                        <div>
-                            <div class="hero-stat-value">98%</div>
-                            <div class="hero-stat-label">Dolor Sit Amet</div>
-                        </div>
-                        <div>
-                            <div class="hero-stat-value">24/7</div>
-                            <div class="hero-stat-label">Consectetur</div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -139,164 +126,219 @@
     </section>
 
    <!-- Reusable Premium Table Component -->
-    <div class="table-card-custom">
-        <div class="table-header-control">
-            <h5 class="card-title mb-0">Daftar Kegiatan Terbaru</h5>
-            <div class="d-flex align-items-center gap-2 flex-wrap">
-                <div class="table-search-box">
-                    <i class="bi bi-search table-search-icon"></i>
-                    <input type="text" class="table-search-input" placeholder="Cari kegiatan...">
+
+<div class="imo-list-page">
+
+    <!-- ==============================
+         DAFTAR STATUS PENGAJUAN HONOR
+    =============================== -->
+    <section class="imo-card">
+
+        <div class="imo-card-header">
+            <div class="imo-heading">
+                <div class="imo-heading-icon">☷</div>
+                <h3>Daftar Status Pengajuan Honor</h3>
+            </div>
+
+            <div class="imo-toolbar">
+                <div class="imo-search">
+                    <span>⌕</span>
+                    <input type="text" placeholder="Cari pegawai...">
                 </div>
-                <div class="table-filter-group">
-                    <button type="button" class="btn-table-action">
-                        <i class="bi bi-funnel"></i> Filter
-                    </button>
-                    <button type="button" class="btn-custom btn-custom-primary btn-custom-sm">
-                        <i class="bi bi-plus-lg"></i> Tambah Data
-                    </button>
-                </div>
+
+                <button class="imo-btn imo-btn-filter">⚲ Filter</button>
             </div>
         </div>
 
-        <div class="table-responsive">
-            <table class="table-custom">
+        <div class="imo-table-wrapper">
+            <table class="imo-table">
                 <thead>
                     <tr>
+                        <th>No</th>
                         <th>Nomor Antrian</th>
-                        <th>Penanggung Jawab</th>
+                        <th>Nama Mitra</th>
                         <th>Nama Kegiatan</th>
                         <th>Tanggal</th>
                         <th>Status</th>
-                        <th class="text-end">Aksi</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
-                        <td class="table-order-id">#BPS-001</td>
+                        <td>1</td>
+                        <td><strong>AHP5-001</strong></td>
                         <td>
-                            <div class="table-user-cell">
-                                <img src="{{ asset('assets/images/user_1.jpg') }}" alt="User" class="table-user-avatar">
+                            <div class="imo-person">
+                                <div class="imo-avatar">BS</div>
                                 <div>
-                                    <div class="table-user-name">Budi Santoso</div>
-                                    <div class="table-user-sub">Statistisi Ahli Muda</div>
+                                    <strong>Budi Santoso</strong>
+                                    <small>Koordinator Mitra</small>
                                 </div>
                             </div>
                         </td>
-                        <td class="table-product-name">Survei Sosial Ekonomi Nasional</td>
-                        <td>{{ date('d M Y') }}</td>
-                        <td><span class="badge-table success">Selesai</span></td>
-                        <td class="text-end">
-                            <a href="#" class="table-btn-action" title="Detail"><i class="bi bi-eye"></i></a>
-                            <a href="#" class="table-btn-action" title="Edit"><i class="bi bi-pencil"></i></a>
-                            <a href="#" class="table-btn-action delete" title="Hapus"><i class="bi bi-trash"></i></a>
+                        <td>Survei Sosial Ekonomi Nasional</td>
+                        <td>15 Nov 2026</td>
+                        <td><span class="imo-status selesai">● Selesai</span></td>
+                        <td>
+                            <div class="imo-actions">
+                                <button title="Lihat">◉</button>
+                                
+                            </div>
                         </td>
                     </tr>
+
                     <tr>
-                        <td class="table-order-id">#BPS-002</td>
+                        <td>2</td>
+                        <td><strong>AHP5-002</strong></td>
                         <td>
-                            <div class="table-user-cell">
-                                <img src="{{ asset('assets/images/user_2.jpg') }}" alt="User" class="table-user-avatar">
+                            <div class="imo-person">
+                                <div class="imo-avatar avatar-blue">SA</div>
                                 <div>
-                                    <div class="table-user-name">Siti Aminah</div>
-                                    <div class="table-user-sub">Koordinator Fungsi</div>
+                                    <strong>Siti Aminah</strong>
+                                    <small>Petugas Input Data</small>
                                 </div>
                             </div>
                         </td>
-                        <td class="table-product-name">Pendataan Potensi Desa (Podes)</td>
-                        <td>{{ date('d M Y') }}</td>
-                        <td><span class="badge-table pending">Proses</span></td>
-                        <td class="text-end">
-                            <a href="#" class="table-btn-action" title="Detail"><i class="bi bi-eye"></i></a>
-                            <a href="#" class="table-btn-action" title="Edit"><i class="bi bi-pencil"></i></a>
-                            <a href="#" class="table-btn-action delete" title="Hapus"><i class="bi bi-trash"></i></a>
+                        <td>Pendataan Potensi Desa (Podes)</td>
+                        <td>15 Nov 2026</td>
+                        <td><span class="imo-status proses">● Proses</span></td>
+                        <td>
+                            <div class="imo-actions">
+                                <button title="Lihat">◉</button>
+                                
+                            </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="table-footer-control">
-            <span class="table-pagination-info">Menampilkan 1 sampai 2 dari 2 entri</span>
-            <nav aria-label="Table pagination">
-                <ul class="pagination pagination-sm mb-0">
-                    <li class="page-item disabled"><a class="page-link" href="#">Sebelumnya</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+        <div class="imo-table-footer">
+            <span>Menampilkan 1 sampai 2 dari 2 entri</span>
 
-    <!-- =========================================================
-         FITUR
-    ========================================================== -->
-    <section class="landing-section" id="fitur">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="section-eyebrow"><i class="bi bi-stars"></i> Fitur Utama</span>
-                <h2 class="section-title">Lorem ipsum dolor sit amet</h2>
-                <p class="section-desc mx-auto">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat.
-                </p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-bar-chart-line"></i></div>
-                        <h3 class="feature-title">Lorem Ipsum</h3>
-                        <p class="feature-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
-                        <h3 class="feature-title">Dolor Sit Amet</h3>
-                        <p class="feature-desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
-                        <h3 class="feature-title">Consectetur</h3>
-                        <p class="feature-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="bi bi-people"></i></div>
-                        <h3 class="feature-title">Adipiscing Elit</h3>
-                        <p class="feature-desc">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                    </div>
-                </div>
+            <div class="imo-pagination">
+                <span>Tampilkan:</span>
+                <select>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>20</option>
+                </select>
+                <button disabled>‹</button>
+                <button class="active">1</button>
+                <button>›</button>
             </div>
         </div>
+
     </section>
-    
 
-    <!-- =========================================================
-         CTA
-    ========================================================== -->
-    <section class="landing-section pt-0" id="kontak">
-        <div class="container">
-            <div class="landing-cta">
-                <h2>Lorem ipsum dolor sit amet?</h2>
-                <p>
-                    Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.
-                    Curabitur blandit tempus porttitor.
-                </p>
-                <div class="d-flex justify-content-center gap-3 flex-wrap position-relative">
-                    <a href="{{ route('login') }}" class="btn-lime">
-                        Masuk ke Sistem <i class="bi bi-arrow-right"></i>
-                    </a>
-                    <a href="mailto:info@example.com" class="btn-ghost-light">
-                        <i class="bi bi-envelope"></i> Hubungi Kami
-                    </a>
+
+    <!-- ==============================
+         DAFTAR ANTRIAN PENGAJUAN ANGGARAN
+    =============================== -->
+    <section class="imo-card">
+
+        <div class="imo-card-header">
+            <div class="imo-heading">
+                <div class="imo-heading-icon">♟</div>
+                <h3>Daftar Antrian Pengajuan Anggaran</h3>
+            </div>
+
+            <div class="imo-toolbar">
+                <div class="imo-search">
+                    <span>⌕</span>
+                    <input type="text" placeholder="Cari pengajuan...">
                 </div>
+
+                <button class="imo-btn imo-btn-filter">⚲ Filter</button>
+                
             </div>
         </div>
+
+        <div class="imo-table-wrapper">
+            <table class="imo-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nomor Antrian</th>
+                        <th>Nama Pengaju</th>
+                        <th>Jenis Anggaran</th>
+                        <th>Tanggal Pengajuan</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>QA-001</strong></td>
+                        <td>
+                            <div class="imo-person">
+                                <div class="imo-avatar avatar-pink">DA</div>
+                                <div>
+                                    <strong>Dewi Anggraini</strong>
+                                    <small>Bagian Keuangan</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Belanja Operasional</td>
+                        <td>14 Nov 2026</td>
+                        <td><span class="imo-status menunggu">● Menunggu</span></td>
+                        <td>
+                            <div class="imo-actions">
+                                <button title="Lihat">◉</button>
+                            
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td><strong>QA-002</strong></td>
+                        <td>
+                            <div class="imo-person">
+                                <div class="imo-avatar avatar-gray">AF</div>
+                                <div>
+                                    <strong>Ahmad Fauzi</strong>
+                                    <small>Bagian Umum</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Belanja Modal</td>
+                        <td>13 Nov 2026</td>
+                        <td><span class="imo-status diproses">● Diproses</span></td>
+                        <td>
+                            <div class="imo-actions">
+                                <button title="Lihat">◉</button>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="imo-table-footer">
+            <span>Menampilkan 1 sampai 2 dari 2 entri</span>
+
+            <div class="imo-pagination">
+                <span>Tampilkan:</span>
+                <select>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>20</option>
+                </select>
+                <button disabled>‹</button>
+                <button class="active">1</button>
+                <button>›</button>
+            </div>
+        </div>
+
     </section>
+
+</div>
+
      <!-- =========================================================
          TENTANG
     ========================================================== -->
@@ -387,25 +429,6 @@
                    aria-label="Facebook">
                     <i class="bi bi-facebook"></i>
                 </a>
-
-                <!-- TWITTER / X -->
-                <a href="https://x.com/USERNAME_X"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="sosial-icon twitter"
-                   aria-label="Twitter">
-                    <i class="bi bi-twitter-x"></i>
-                </a>
-
-                <!-- TIKTOK -->
-                <a href="https://www.tiktok.com/@USERNAME_TIKTOK"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="sosial-icon tiktok"
-                   aria-label="TikTok">
-                    <i class="bi bi-tiktok"></i>
-                </a>
-
                 <!-- WEBSITE BPS -->
                 <a href="https://naganrayakab.bps.go.id/"
                    target="_blank"
@@ -424,9 +447,10 @@
     <div class="footer-bottom">
 
         <!-- LOGO IMO DAN NAMA -->
+    
         <div class="footer-logo">
-            <img src="{{ asset('images/logo-imo.png') }}"
-                 alt="Logo IMO">
+            <img src="{{ asset('assets/images/logo-sm.png') }}"
+                 alt="Logo IMO BPS">
             <span>IMO BPS</span>
         </div>
 

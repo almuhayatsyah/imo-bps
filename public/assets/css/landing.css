@@ -827,3 +827,376 @@ html {
         gap: 18px;
     }
 }
+
+
+/* =========================================
+   IMO BPS - DAFTAR STATUS & ANTRIAN
+========================================= */
+
+.imo-list-page {
+    background: #f3f6f7;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    color: rgba(180, 241, 5, 0.2);
+    font-family: inherit;
+}
+
+/* CARD */
+.imo-card {
+    background: #ffffff;
+    border: 1px solid #e8edf1;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(20, 50, 75, 0.05);
+    width: 100%;
+    min-width: 0;
+}
+
+/* HEADER */
+.imo-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.imo-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.imo-heading h3 {
+    font-size: 21px;
+    font-weight: 750;
+    color: #173653;
+    margin: 0;
+}
+
+.imo-heading-icon {
+    width: 46px;
+    height: 46px;
+    background: #173f60;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+/* TOOLBAR */
+.imo-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.imo-search {
+    height: 44px;
+    width: 245px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    border: 1px solid #dce4eb;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.imo-search span {
+    font-size: 23px;
+    color: #71869a;
+}
+
+.imo-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #173653;
+    font-size: 14px;
+}
+
+.imo-search input::placeholder {
+    color: #9aaaba;
+}
+
+.imo-btn {
+    height: 44px;
+    padding: 0 17px;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.imo-btn-filter {
+    background: #fff;
+    border: 1px solid #dce4eb;
+    color: #173653;
+}
+
+.imo-btn-filter:hover {
+    background: #edf3f7;
+}
+
+.imo-btn-add {
+    background: #06452f;
+    border: 1px solid #06452f;
+    color: white;
+}
+
+.imo-btn-add:hover {
+    background: #043522;
+}
+
+/* TABLE */
+.imo-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.imo-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.imo-table thead th {
+    background: #193f60;
+    color: #fff;
+    padding: 17px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.imo-table thead th:first-child {
+    border-radius: 11px 0 0 11px;
+}
+
+.imo-table thead th:last-child {
+    border-radius: 0 11px 11px 0;
+    text-align: center;
+}
+
+.imo-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #e9eef2;
+    color: #233b52;
+    font-size: 14px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.imo-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.imo-table tbody td:last-child {
+    text-align: center;
+}
+
+.imo-table tbody td strong {
+    font-weight: 700;
+    color: #173653;
+}
+
+/* PERSON */
+.imo-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.imo-person div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.imo-person strong {
+    font-size: 14px;
+}
+
+.imo-person small {
+    color: #8192a3;
+    font-size: 12px;
+}
+
+.imo-avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #dce8f3;
+    color: #173f60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.avatar-blue {
+    background: #dceeff;
+    color: #1765a1;
+}
+
+.avatar-pink {
+    background: #fce6ed;
+    color: #b64b70;
+}
+
+.avatar-gray {
+    background: #e9edf2;
+    color: #526579;
+}
+
+/* STATUS */
+.imo-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.imo-status.selesai {
+    background: #dcfce9;
+    color: #07944c;
+}
+
+.imo-status.proses {
+    background: #fff0df;
+    color: #ed7100;
+}
+
+.imo-status.menunggu {
+    background: #e0efff;
+    color: #1674db;
+}
+
+.imo-status.diproses {
+    background: #eee5ff;
+    color: #7538d6;
+}
+
+/* ACTION BUTTONS */
+.imo-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.imo-actions button {
+    width: 37px;
+    height: 37px;
+    border: 1px solid #dce4eb;
+    background: white;
+    border-radius: 10px;
+    color: #173f60;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.imo-actions button:hover {
+    background: #edf4f8;
+    border-color: #173f60;
+}
+
+/* FOOTER & PAGINATION */
+.imo-table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 5px 0;
+    color: #71869a;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+.imo-pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.imo-pagination select,
+.imo-pagination button {
+    height: 38px;
+    min-width: 38px;
+    padding: 0 10px;
+    border: 1px solid #dce4eb;
+    border-radius: 10px;
+    background: white;
+    color: #173653;
+    font-size: 14px;
+}
+
+.imo-pagination button {
+    cursor: pointer;
+}
+
+.imo-pagination button.active {
+    background: #173f60;
+    color: white;
+    border-color: #173f60;
+}
+
+.imo-pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .imo-list-page {
+        padding: 14px;
+        gap: 18px;
+    }
+
+    .imo-card {
+        padding: 16px;
+    }
+
+    .imo-card-header {
+        align-items: flex-start;
+    }
+
+    .imo-heading h3 {
+        font-size: 17px;
+    }
+
+    .imo-toolbar {
+        width: 100%;
+    }
+
+    .imo-search {
+        width: 100%;
+    }
+
+    .imo-table-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .imo-pagination {
+        flex-wrap: wrap;
+    }
+}
